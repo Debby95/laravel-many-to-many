@@ -44,7 +44,8 @@
                                 <option value=""></option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}"
-                                        {{ old('category_id', $post->category_id) === $category->id ? 'selected' : '' }}>{{ $category->name }}
+                                        {{ old('category_id', $post->category_id) === $category->id ? 'selected' : '' }}>
+                                        {{ $category->name }}
                                     </option>
                                 @endforeach
                             </select>
@@ -58,8 +59,8 @@
                                 <option value=""></option>
                                 @foreach ($tags as $tag)
                                     <option value="{{ $tag->id }}" {{ $post->tags->contains($tag) ? 'selected' : '' }}>
-                                    {{ $tag->name }}
-                                </option>
+                                        {{ $tag->name }} 
+                                    </option>
                                 @endforeach
                             </select>
                             @error('tags')

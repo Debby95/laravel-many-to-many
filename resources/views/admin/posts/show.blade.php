@@ -32,7 +32,7 @@
                         </dd>
                         <dt>Tags</dt>
                         <dd>
-                            {{$post->tags ? $post->tags: ''}}
+                            {{$post->tags->implode('name', ' - ')}}
                         </dd>
                     </div>
                 </div>
